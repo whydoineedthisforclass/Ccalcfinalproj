@@ -36,6 +36,7 @@ void sentence(){
 int main(){
     int num1, num2,z;
     char type;
+    printf(" Welcome to the baby calculator!\n");
     printf("Enter what you want to do...*, /, +, or -\nexponential is e, Maximum is m.\n");
     printf(" Whatever you do...do not press x\n");
     scanf("%c",&type);
@@ -76,4 +77,5 @@ int main(){
             break;
     }
     return 0;
+    //proof that I merged the thingy..
 }
