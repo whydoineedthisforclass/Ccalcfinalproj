@@ -1,26 +1,26 @@
 #include <stdio.h>
 //Basic calculator
-int multi(int a, int b){
+float multi(float a, float b){
     return a*b;
 }
-int div(int a, int b){
+float div(float a, float b){
     return a/b;
 }
-int sub(int a, int b){
+float sub(float a, float b){
     return a-b;
 }
-int ad(int a, int b){
+float ad(float a, float b){
     return a+b;
 }
 //Square and Maximum for giggles
-int maximum(int a, int b){
+float maximum(float a, float b){
     if(a>b){
         return a;
     }else{
         return b;
     }
 }
-int squ(int a,int b){
+float squ(float a,float b){
     int e,f;
     printf("What type of exponential function would you like? Ex: Square is 2 while cube is 3\n");
     scanf("%d", &e);
@@ -29,53 +29,44 @@ int squ(int a,int b){
     }
     return b;
 }
-//Do not press x....
-void sentence(){
-    printf("\nSave me I'm stuck in a laptop!!!!!!\n\n");
-}
 int main(){
-    int num1, num2,z;
+    float num1, num2,z;
     char type;
-    printf(" Welcome to the baby calculator!\n");
-    printf("Enter what you want to do...*, /, +, or -\nexponential is e, Maximum is m.\n");
+    printf("Enter what you want to do...*, /, +, or -\nexponential is e.\n");
     printf(" Whatever you do...do not press x\n");
     scanf("%c",&type);
     printf("Enter number(s) you want to work with\n");
     switch(type){
         case '*':
-            scanf("%d%d",&num1, &num2);
+            scanf("%f%f",&num1, &num2);
             z= multi(num1,num2);
-            printf("Answer is %d\n", z);
+            printf("Answer is %f\n", z);
             break;
         case '/':
-            scanf("%d%d",&num1, &num2);
+            scanf("%f%f",&num1, &num2);
             z= div(num1,num2);
-            printf("Answer is %d\n", z);
+            printf("Answer is %f\n", z);
             break;
         case '-':
-            scanf("%d%d",&num1, &num2);
+            scanf("%f%f",&num1, &num2);
             z= sub(num1,num2);
-            printf("Answer is %d\n", z);
+            printf("Answer is %f\n", z);
             break;
         case '+':
-            scanf("%d%d",&num1, &num2);
+            scanf("%f%f",&num1, &num2);
             z= ad(num1,num2);
-            printf("Answer is %d\n", z);
+            printf("Answer is %f\n", z);
             break;
         case 'e':
-            scanf("%d",&num1);
+            scanf("%f",&num1);
             z= squ(num1,num1);
-            printf("Answer is %d\n", z);
+            printf("Answer is %f\n", z);
             break;
         case 'm':
-            scanf("%d%d",&num1, &num2);
+            scanf("%f%f",&num1, &num2);
             z= maximum(num1,num2);
-            printf("Answer is %d\n", z);
-            break;
-        case 'x':
-            sentence();
+            printf("Answer is %f\n", z);
             break;
     }
     return 0;
-    //proof that I merged the thingy..
 }
